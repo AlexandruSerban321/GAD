@@ -4,18 +4,16 @@ class Fractie(object):
         self.numitor = None
 
     def __str__(self):
-        return str(self.numarator) + "/" + str(self.numitor)
+        return str(self.numarator)+"/"+str(self.numitor)
 
     def __add__(self, other):
-        return "numitor_nou: " + str(self.numitor + other.numitor) + " numarator_nou: "\
-            + str(self.numarator + other.numarator)
+        return str(self.numarator + other.numarator)+"/"+str(self.numitor + other.numitor)
 
     def __sub__(self, other):
-        return "numitor_nou: " + str(self.numitor - other.numitor) + " numarator_nou: "\
-            + str(self.numarator - other.numarator)
+        return str(self.numarator - other.numarator)+"/"+str(self.numitor - other.numitor)
 
     def inverse(self):
-        return "numitor_nou: " + str(self.numarator) + " numarator_nou: " + str(self.numitor)
+        return str(self.numitor)+"/"+str(self.numarator)
 
     def get_numarator(self):
         return self.numarator
@@ -37,9 +35,10 @@ def main():
     f1.set_numitor(3)
     f2.set_numarator(4)
     f2.set_numitor(5)
-    print(f1 + f2)
-    print(f1 - f2)
-    print(f1.inverse())
+    print("afisam \"numărător/numitor\": "+str(f1))
+    print("returnam o noua fractie care reprezinta adunarea: "+str(f1 + f2))
+    print("returnam o nouă fracție care reprezinta scădearea: "+str(f1 - f2))
+    print("returnează o nouă fracție (inversa fracției): "+str(f1.inverse()))
 
 
-print(main())
+main()
